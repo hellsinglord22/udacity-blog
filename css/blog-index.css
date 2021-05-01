@@ -9,6 +9,20 @@
     "footer";
 }
 
+.author-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.author-image {
+    margin-right: 5px;
+}
+
+.author-name {
+    color: var(--main-color);
+}
 
 
 .header-image {
@@ -46,16 +60,36 @@
 .navbar {
     background-color: var(--secondary-color);
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 250px;
 }
 
+
 .navbar-items {
-    margin: 20px;
+    width: 50%;
+}
+
+.navbar-items > a {
+    margin: 20px 0px;
     float: left;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+
+.website-title {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar-items > a:hover {
+    color: var(--fourth-color);
 }
 
 a {
@@ -66,22 +100,52 @@ a.active {
     color: white;
 }
 
-
-.navbar a:hover {
-    color: black;
-}
-
 .navbar a.active {
     color: white;
 }
 
-
 .content {
-    padding: 100px 250px;
+    padding: 150px 250px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    grid-area: 'content'
+    gap: 35px;
+    grid-area: 'content';
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .content {
+        padding: 150px 50px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 35px;
+        grid-area: 'content';
+    }
+    .navbar {
+        background-color: var(--secondary-color);
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        padding: 0px 50px;
+    }
+
+    .website-title {
+        font-size: 16px;
+    }
+
+    .navbar-items > a {
+        color: white;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .navbar-items {
+        width: 70%;
+    }
+
 }
 
 .footer {
@@ -109,9 +173,14 @@ a.active {
 
 
 .cards {
-    height: 350px;
-    box-shadow: 1px 1px 1px 1px #EDECF0;
-    position: relative;
+    height: 400px;
+    box-shadow: 2px 2px 2px 2px #EDECF0;
+    transition: all .2s ease-in-out;
+}
+
+
+.cards:hover {
+    transform: scale(1.1);
 }
 
 
@@ -145,7 +214,7 @@ a.active {
 .blog-title {
     color: var(--secondary-color);
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .blog-type {
@@ -154,7 +223,7 @@ a.active {
 
 
 .blog-date {
-    width: 50%;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     color: var(--third-color);
