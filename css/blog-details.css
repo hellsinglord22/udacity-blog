@@ -47,26 +47,6 @@
     text-align: center;
 }
 
-.navbar {
-    background-color: var(--secondary-color);
-    display: flex;
-    align-items: center;
-}
-
-.navbar-items {
-    margin: 20px;
-    float: left;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-
-.navbar a:hover {
-    color: black;
-}
-
 .navbar a.active {
     background-color: #4CAF50;
     color: white;
@@ -76,7 +56,7 @@
 .content {
     padding: 100px 250px;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 70% 30%;
     gap: 20px;
     grid-area: 'content'
 }
@@ -102,4 +82,38 @@
 .logo {
     width: 150px;
     height: 150px;
+}
+
+
+.navbar {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    padding: 0 250px;
+}
+.navbar-items {
+    width: 50%;
+}
+
+.navbar-items > a {
+    margin: 20px 0px;
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.website-title {
+    color: white;
+    font-size: 24px;
+}
+
+.navbar-items > a:hover {
+    color: var(--fourth-color);
 }
