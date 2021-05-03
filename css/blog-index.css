@@ -88,6 +88,18 @@
     font-size: 24px;
 }
 
+
+.read-more-btn {
+    background-color: var(--secondary-color); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 .navbar-items > a:hover {
     color: var(--fourth-color);
 }
@@ -173,7 +185,7 @@ a.active {
 
 
 .cards {
-    height: 400px;
+    height: 420px;
     box-shadow: 2px 2px 2px 2px #EDECF0;
     transition: all .2s ease-in-out;
 }
@@ -195,10 +207,6 @@ a.active {
     opacity: 0;
 }
 
-.cards-overlay:hover {
-    opacity: 0.6;
-    cursor: pointer;
-}
 
 .blog-image {
     max-width: 100%;
@@ -222,7 +230,7 @@ a.active {
 }
 
 
-.blog-date {
+.blog-button {
     width: 100%;
     display: flex;
     justify-content: flex-end;
